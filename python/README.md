@@ -20,11 +20,13 @@
 * [Dicionários](#dicionários)
 * [Funções](#funções)
 * [Lambda](#lambda)
+* [Módulos](#módulos)
 * [Testes](#testes)
 * [Try/except](#tryexcept)
 * [Random](#random)
 * [I/O](#io)
 * [Orientação a Objetos](#orientação-a-objetos)
+* [Conexão com Banco de Dados](#conexão-com-banco-de-dados)
 
 ## Instalação
 

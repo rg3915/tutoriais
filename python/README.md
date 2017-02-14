@@ -1,5 +1,48 @@
 # Introdução ao Python
 
+# Ementa
+
+* [Instalação](#instalação)
+* [Python é interpretado](#python-é-interpretado)
+* [Python tem tipagem forte e dinâmica](#python-tem-tipagem-forte-e-dinâmica)
+* [strings](#strings)
+* [replace](#replace)
+* [slices](#slices)
+* [listas](#listas)
+* [tuplas](#tuplas)
+* [split](#split)
+* [while](#while)
+* [for](#for)
+* [if else](#if-else-condições)
+* [list comprehensions](#list-comprehensions)
+* [type(), help(), dir()](#type-help-dir)
+* [atribuições múltiplas](#atribuições-múltiplas)
+* [Dicionários](#dicionários)
+* [Funções](#funções)
+* [Lambda](#lambda)
+* [Testes](#testes)
+* [Try/except](#tryexcept)
+* [Random](#random)
+* [I/O](#io)
+* [Orientação a Objetos](#orientação-a-objetos)
+
+## Instalação
+
+Para quem usa Windows vá em [www.python.org/downloads/](https://www.python.org/downloads/) e baixe Python 3.5.2. Ao instalar não esqueça de marcar o check 'Add Python 3.5 to PATH'.
+
+Para quem usa Linux ou Mac sugiro este [tutorial de instalação com pyenv](https://github.com/rg3915/django-experience/wiki/Instalando-o-pyenv).
+
+```bash
+python -V
+```
+
+### IPython
+
+```bash
+sudo -H pip install ipython
+```
+
+
 ## Python é interpretado
 
 O que são os `*.pyc`?

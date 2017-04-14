@@ -1363,6 +1363,56 @@ if __name__ == '__main__':
     print('Motor:', carro.ligado)
 ```
 
+### Salas
+
+```python
+# rooms.py
+class Person(object):
+
+    def __init__(self, username):
+        self.username = username
+
+
+class Room(object):
+
+    def __init__(self, room):
+        self.room = room
+        self.persons = []
+
+    def add_person(self, person):
+        '''
+        Adiciona pessoas na lista 'persons'.
+        Se for uma lista ou tupla usa 'extend'.
+        Caso contrário, usa 'append'.
+        '''
+        if isinstance(person, (list, tuple)):
+            self.persons.extend(person)
+        else:
+            self.persons.append(person)
+
+    def count_persons(self):
+        # Conta os items da lista 'persons'.
+        return len(self.persons)
+
+
+if __name__ == '__main__':
+    sala1 = Room('Think Lab')
+    print(sala1.room)
+    print(sala1.persons)
+    sala1.add_person('Regis')
+    sala1.add_person('Fernando')
+    print(sala1.room, sala1.count_persons(), sala1.persons)
+
+    sala2 = Room('Watson')
+    sala2.add_person('Marcia')
+    print(sala2.room, sala2.count_persons(), sala2.persons)
+
+    sala3 = Room('Auditório')
+    persons = ['Ana', 'Beatriz', 'Carlos', 'Daniel', 'Eduardo', 'Frederico']
+    sala3.add_person(persons)
+    print(sala3.room, sala3.count_persons(), sala3.persons)
+```
+
 ## Conexão com Banco de Dados
 
 todo

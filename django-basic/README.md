@@ -100,18 +100,52 @@ Vamos chamar o repositório de **djangotutorial**.
 Agora clone o projeto digitando
 
 ```bash
-git clone git@github.com:nome/djangotutorial.git
+git clone git@github.com:seunome/djangotutorial.git
 cd djangotutorial
+```
+
+Para fazer o clone via HTTPS digite
+
+```bash
+git clone https://github.com/seunome/djangotutorial.git
 ```
 
 Talvez você precise configurar no seu terminal os seguintes comandos
 
 ```
 git config --global user.name "Seu Nome"
-git config --global user.email "email@example.com"
+git config --global user.email "seuemail@example.com"
 ```
 
 Edite o README.
+
+```
+# Mini Curso de Django Básico
+
+## Instalação
+
+* Clone o repositório.
+* Crie um virtualenv com Python 3.
+* Ative o virtualenv.
+* Instale as dependências.
+* Configure a instância com o .env.
+* Execute as migrações no banco de dados.
+* Execute os testes.
+* Rode a aplicação.
+
+git clone https://github.com/seunome/djangotutorial.git
+cd djangotutorial
+python3 -m venv .venv
+source .venv/bin/activate
+# .venv\Scripts\activate.bat  # Windows
+python -m pip install -r requirements.txt
+python contrib/env_gen.py
+python manage.py migrate
+python manage.py test
+python manage.py runserver
+```
+
+E vamos subir as alterações para o GitHub.
 
 ```bash
 git status
@@ -139,11 +173,46 @@ for i in lista:
 for i in range(10):
     print(i)
 
+movie = {
+    'name': 'Os Vingadores',
+    'category': 'ação',
+    'distributor': 'Disney',
+    'raised': 1.519,
+    'release': '2012-04-27',
+}
 
-class Veiculo(object):
+movie['name']
+movie['category']
+movie['release']
 
-    def ligar_motor(self):
-        self.ligado = True
+
+import datetime
+
+
+class Movie(object):
+
+    def __init__(self, name='', category='', distributor='', release=''):
+        self.name = name
+        self.category = category
+        self.distributor = distributor
+        self.release = release
+
+    def count_string_movie(self):
+        return len(self.name)
+
+
+if __name__ == '__main__':
+    movie = Movie()
+    movie.name = 'Titanic'
+    movie.category = 'aventura'
+    movie.distributor = 'Paramount'
+    movie.release = datetime.date(1998, 1, 16)
+    print(movie)
+    print(movie.name)
+    print(movie.category)
+    print(movie.distributor)
+    print(movie.release)
+    print(movie.count_string_movie())
 ```
 
 
@@ -189,7 +258,7 @@ Veja o processo de um *request* e *response*.
 O Python 3 já tem um **virtualenv** como bateria inclusa. *virtualenv* é um ambiente onde você isola as dependências do seu projeto.
 
 ```bash
-python -m venv .venv
+python3 -m venv .venv
 ```
 
 ### Ativando o virtualenv
@@ -243,7 +312,9 @@ Para desativar o ambiente digitamos
 
 **Instalando Python 3 no Windows**
 
-Vá em www.python.org/downloads/ e baixe Python 3.5.2. Ao instalar não esqueça de marcar o check 'Add Python 3.5 to PATH'.
+Vá em www.python.org/downloads/ e baixe Python 3.6. Ao instalar não esqueça de marcar o check 'Add Python 3.6 to PATH'.
+
+![img](img/python-win-installer.png)
 
 **Instalando Python 3 no Linux ou Mac**
 
@@ -266,7 +337,7 @@ Vendo o que foi instalado
 
 ```bash
 pip freeze
-Django==1.10.1
+Django==1.11
 ```
 
 Crie o `requirements.txt` (os ingredientes do bolo)
@@ -469,7 +540,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('<h1>Django</h1><h3>Bem-vindo ao .NET Coders!</h3>')
+    return HttpResponse('<h1>Django</h1><h3>Bem-vindo ao Django!</h3>')
 ```
 
 ### Editando urls.py
@@ -548,7 +619,7 @@ from django.shortcuts import render
 # from django.http import HttpResponse
 
 # def home(request):
-#     return HttpResponse('<h1>Django</h1><h3>Bem-vindo ao .NET Coders!</h3>')
+#     return HttpResponse('<h1>Django</h1><h3>Bem-vindo ao Django!</h3>')
 
 def home(request):
     return render(request, 'index.html')
@@ -561,7 +632,7 @@ Estando na pasta `venv` digite
 ```bash
 cd myproject
 mkdir -p core/templates
-echo "<html><body><h1>Tutorial Django</h1><h3>Bem-vindo ao .NET Coders.</h3></body></html>" > core/templates/index.html
+echo "<html><body><h1>Tutorial Django</h1><h3>Bem-vindo ao Django.</h3></body></html>" > core/templates/index.html
 ```
 
 Explorando o [layoutit](http://www.layoutit.com/)
@@ -1019,7 +1090,7 @@ Vamos editar:
   <div class="container">
     <div class="jumbotron">
       <h1>Tutorial Django</h1>
-      <h3>Bem-vindo ao .NET Coders!</h3>
+      <h3>Bem-vindo ao Django!</h3>
     </div>
   </div>
 {% endblock content %}
@@ -1454,7 +1525,7 @@ echo "web: gunicorn myproject.wsgi --log-file -" > Procfile
 E `runtime.txt`
 
 ```bash
-echo python-3.5.2 > runtime.txt
+echo python-3.6 > runtime.txt
 ```
 
 Suba as alterações para o GitHub
@@ -1626,7 +1697,7 @@ O `index.html` vai ficar assim:
         <img id="image" src="{% static 'img/XebTa9B.png' %}" alt="">
       </div>
       <h1>Tutorial Django</h1>
-      <h3>Bem-vindo ao .NET Coders!</h3>
+      <h3>Bem-vindo ao Django!</h3>
     </div>
   </div>
 {% endblock content %}

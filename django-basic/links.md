@@ -1,6 +1,6 @@
 # Links
 
-[Material do Workshop de Django Para Iniciantes]()
+[Material do Workshop de Django Para Iniciantes](https://github.com/rg3915/tutoriais/tree/master/django-basic)
 
 [Instalando Python 3 com pyenv](https://github.com/rg3915/django-experience/wiki/Instalando-o-pyenv)
 

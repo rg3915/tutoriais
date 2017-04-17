@@ -1583,7 +1583,7 @@ heroku open
 ## Livros
 
 
-[Django Essencial de Julia Elman da Novatec](http://www.novatec.com.br/livros/django/)
+[Django Essencial de Julia Elman da Novatec](https://novatec.com.br/livros/django-essencial/)
 
 [Two Scoops of Django 1.8 de Daniel and Audrey Roy Greenfeld](https://www.twoscoopspress.com/) (@pydanny and @audreyr)
 

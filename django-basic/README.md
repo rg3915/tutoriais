@@ -779,6 +779,7 @@ admin.site.register(Movie)
 ### Turbinando o shell com iPython e django extensions
 
 ```bash
+pip install ipython
 pip install django-extensions
 ```
 

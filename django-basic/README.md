@@ -1707,6 +1707,6 @@ O `index.html` vai ficar assim:
 
 [Links](links.md)
 
-Participem do [Grupy-SP](www.meetup.com/pt-BR/Grupy-SP/)
+Participem do [Grupy-SP](https://www.meetup.com/pt-BR/Grupy-SP/)
 
 Meu portfólio http://rg3915.github.io/

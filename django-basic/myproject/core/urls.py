@@ -1,9 +1,9 @@
 from django.conf.urls import url
-from .views import home, movie_list, movie_detail
-
+from myproject.core import views as c
 
 urlpatterns = [
-    url(r'^$', home, name='home'),
-    url(r'^movie/$', movie_list, name='movie_list'),
-    url(r'^movie/(?P<pk>\d+)/$', movie_detail, name='movie_detail'),
+    url(r'^$', c.home, name='home'),
+    url(r'^movie/$', c.MovieList.as_view(), name='movie_list'),
+    url(r'^movie/(?P<pk>\d+)/$', c.MovieDetail.as_view(), name='movie_detail'),
+    url(r'^movie/add/$', c.MovieCreate.as_view(), name='movie_add'),
 ]

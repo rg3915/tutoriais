@@ -820,6 +820,14 @@ manage shell < shell/distributors.py
 manage shell < shell/movies.py
 ```
 
+**Atenção:** caso você já tenha instalado o `shell_plus` provavelmente vai dar um erro ao rodar os scripts acima, então tente com
+
+```bash
+python manage.py shell_plus < shell/categorys.py
+python manage.py shell_plus < shell/distributors.py
+python manage.py shell_plus < shell/movies.py
+```
+
 Leia mais
 
 ```python

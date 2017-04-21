@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Django</title>
+  <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+           
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+             <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+          </button> <a class="navbar-brand" href="#">Movie</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active">
+              <a href="#">Filmes</a>
+            </li>
+          </ul>
+        </div>
+        
+      </nav>
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Filme</th>
+              <th>Categoria</th>
+              <th>Distribuidor</th>
+              <th>Bilheteria (bilhões)</th>
+              <th>Lançamento</th>
+              <th>Gostou</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for movie in movies %}
+              <tr>
+                <td>{{ movie.movie }}</td>
+                <td>{{ movie.category }}</td>
+                <td>{{ movie.distributor }}</td>
+                <td>{{ movie.raised }}</td>
+                <td>{{ movie.release|date:"d/m/Y" }}</td>
+                <td>{{ movie.liked }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,6 +1,13 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
+# from django.http import HttpResponse
+from .models import Movie
 
 
 def home(request):
-    return HttpResponse('<h1>Django</h1><h3>Bem-vindo ao Django!</h3>')
+    return render(request, 'index.html')
+
+
+def movie_list(request):
+    movies = Movie.objects.all()
+    context = {'movies': movies}
+    return render(request, 'core/movie_list.html', context)

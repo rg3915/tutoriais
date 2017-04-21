@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <ul class="breadcrumb">
+        <li><a href="{% url 'core:movie_list' %}">Filmes</a> <span class="divider"></span></li>
+        <li class="active">{{ movie.movie }}</li>
+      </ul>
+
+      <div class="col-sm-6 col-md-4">
+        <div class="list-group">
+          <h1>
+            {{ movie.movie}}
+            {% if movie.liked %}
+              <td><span class="pull-right glyphicon glyphicon-ok-sign" style="color: #44AD41"></span></td>
+            {% else %}
+              <td><span class="pull-right glyphicon glyphicon-minus-sign" style="color: #DE2121"></span></td>
+            {% endif %}
+          </h1>
+          <div class="list-group-item">
+            <h4>{{ movie.category }}</h4>
+          </div>
+          <div class="list-group-item">
+            <h4>{{ movie.distributor }}</h4>
+          </div>
+          <div class="list-group-item">
+            <h3>U$ {{ movie.raised }}</h3>
+          </div>
+          <div class="list-group-item">
+            <h4>{{ movie.release|date:"d/m/Y" }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}

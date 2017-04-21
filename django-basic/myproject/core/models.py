@@ -1,5 +1,5 @@
 from django.db import models
-# from django.core.urlresolvers import reverse_lazy as r
+from django.core.urlresolvers import reverse_lazy as r
 
 
 class Distributor(models.Model):
@@ -43,3 +43,6 @@ class Movie(models.Model):
 
     def __str__(self):
         return self.movie
+
+    def get_absolute_url(self):
+        return r('core:movie_detail', kwargs={'pk': self.pk})

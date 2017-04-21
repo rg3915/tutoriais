@@ -1179,6 +1179,8 @@ def movie_detail(request, pk):
 #### urls.py
 
 ```python
+from .views import movie_detail
+
 url(r'^movie/(?P<pk>\d+)/$', movie_detail, name='movie_detail'),
 ```
 

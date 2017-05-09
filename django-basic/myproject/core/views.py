@@ -6,7 +6,7 @@ from .models import Movie
 
 
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'landpage.html')
 
 
 class MovieList(ListView):

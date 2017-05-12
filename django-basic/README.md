@@ -1519,8 +1519,8 @@ pip freeze > requirements.txt
 Inserir em `requirements.txt`
 
 ```
-gunicorn==19.4.1
-psycopg2==2.6.1
+gunicorn==19.7.1
+psycopg2==2.7.1
 ```
 
 O gunicorn é o servidor de aplicação.

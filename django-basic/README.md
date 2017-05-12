@@ -1536,7 +1536,7 @@ echo "web: gunicorn myproject.wsgi --log-file -" > Procfile
 E `runtime.txt`
 
 ```bash
-echo python-3.6 > runtime.txt
+echo python-3.6.1 > runtime.txt
 ```
 
 Suba as alterações para o GitHub
@@ -1558,6 +1558,12 @@ Veja o novo repositório
 
 ```bash
 git remote -v
+```
+
+Talvez você precise do comando
+
+```bash
+heroku git:remote -a djangotutorial-regis
 ```
 
 Primeiro enviamos as configurações para o Heroku

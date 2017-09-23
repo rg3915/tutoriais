@@ -756,7 +756,7 @@ d.items()
 Acessar um item que talvez não exista
 
 ```python
-d.get(chave) # retorna None ou default
+d.get(chave, 'Python') # retorna None ou o valor default
 ```
 
 ```python
